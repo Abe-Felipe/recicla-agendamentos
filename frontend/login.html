@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Painel Administrativo</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Painel Administrativo</h1>
+      <p>Por favor, faça o login para continuar.</p>
+    </header>
+
+    <form id="login-form">
+      
+      <div id="login-message" class="message" style="display: none;"></div>
+
+      <fieldset>
+        <legend>Acesso Restrito</legend>
+        
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+      </fieldset>
+      
+      <button type="submit" id="login-button">Entrar</button>
+    </form>
+  </main>
+
+  <script src="js/login.js" defer></script>
+</body>
+</html>

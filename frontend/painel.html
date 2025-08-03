@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel de Agendamentos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Painel de Agendamentos</h1>
+    </header>
+
+    <section id="filtros">
+      <form id="filtros-form">
+        <div class="form-group">
+          <label for="filtro-data">Filtrar por Data</label>
+          <input type="date" id="filtro-data" name="data_coleta" />
+        </div>
+        <div class="form-group">
+          <label for="filtro-status">Filtrar por Status</label>
+          <select id="filtro-status" name="status">
+            <option value="">Todos</option>
+            <option value="Pendente">Pendente</option>
+            <option value="Agendado">Agendado</option>
+            <option value="Concluído">Concluído</option>
+            <option value="Cancelado">Cancelado</option>
+          </select>
+        </div>
+        <button type="submit">Filtrar</button>
+      </form>
+    </section>
+
+    <section id="agendamentos-content">
+      <p>Carregando agendamentos...</p>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal-container" class="modal">
+    <div class="modal-content">
+      <div id="modal-content">
+        <!-- Aqui o conteúdo do agendamento será injetado via JS -->
+      </div>
+      <div class="modal-actions">
+        <label for="status-select"><strong>Status:</strong></label>
+        <select id="status-select">
+          <option value="Pendente">Pendente</option>
+          <option value="Agendado">Agendado</option>
+          <option value="Concluído">Concluído</option>
+          <option value="Cancelado">Cancelado</option>
+        </select>
+
+        <div id="justificativa-group" style="display: none;">
+          <label for="justificativa-textarea"><strong>Justificativa:</strong></label>
+          <textarea id="justificativa-textarea"></textarea>
+        </div>
+        
+        <button id="salvar-status-btn">Salvar</button>
+        <button id="modal-close-btn">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/painel.js" defer></script>
+</body>
+</html>

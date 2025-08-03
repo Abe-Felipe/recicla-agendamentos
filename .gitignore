@@ -1,0 +1,68 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*.local
+*.local
+
+# Logs
+logs/
+*.log
+*.out
+*.pid
+*.seed
+*.log.*
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+cypress/reports/
+cypress/results/
+cypress/cache/
+.cypress/
+
+# VSCode
+.vscode/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Docker
+**/.docker/
+**/.env.docker
+docker-compose.override.yml
+
+# SonarQube
+.sonar/
+coverage/
+coverage-final.json
+lcov-report/
+sonar-report/
+.report/
+test-results/
+
+# Git
+*.orig
+*.swp
+.idea/
+*.iml
+
+# Build
+dist/
+build/
+
+# Backend database
+backend/database.sqlite
+backend/*.sqlite
+backend/*.sqlite3
+
+# Outros arquivos de IDEs
+*.sublime*
+*.code-workspace
+
+# Frontend cache
+frontend/.cache/

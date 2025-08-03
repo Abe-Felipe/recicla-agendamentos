@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento de Coleta de Recicláveis</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="success-toast" class="toast hidden">
+    <p id="toast-message"></p>
+  </div>
+
+  <main class="container">
+    <header>
+      <h1>Agendamento de Coleta de Recicláveis</h1>
+      <p>Preencha o formulário abaixo para solicitar a coleta em sua residência.</p>
+    </header>
+
+    <form id="agendamento-form">
+      <div id="form-message"></div>
+
+      <fieldset>
+        <legend>Seus Dados</legend>
+
+        <div class="form-group">
+          <label for="nome_completo">Nome Completo</label>
+          <input type="text" id="nome_completo" name="nome_completo" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="endereco">Endereço (Rua, Número, Bairro, Cidade)</label>
+          <input type="text" id="endereco" name="endereco" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone de Contato</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+          <small class="error-message"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail (Opcional)</label>
+          <input type="email" id="email" name="email">
+          <small class="error-message"></small>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Detalhes da Coleta</legend>
+
+        <div class="form-group">
+          <label>Tipos de Material (selecione um ou mais)</label>
+            <div id="materiais-container">
+              <button type="button" class="material-btn" data-value="Papel">Papel</button>
+              <button type="button" class="material-btn" data-value="Plástico">Plástico</button>
+              <button type="button" class="material-btn" data-value="Vidro">Vidro</button>
+              <button type="button" class="material-btn" data-value="Metal">Metal</button>
+              <button type="button" class="material-btn" data-value="Eletrônicos">Eletrônicos</button>
+            </div>
+            <small class="error-message" id="materiais-error"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="data_coleta">Data Sugerida para Coleta</label>
+          <input type="date" id="data_coleta" name="data_coleta" required>
+          <small class="error-message"></small>
+        </div>
+      </fieldset>
+
+      <button type="submit" id="submit-button">Confirmar Agendamento</button>
+    </form>
+  </main>
+  <div id="resumo-modal" class="modal">
+    <div class="modal-content">
+      <h2>Agendamento Confirmado</h2>
+      <div class="modal-detalhes">
+        <strong>Seu número de protocolo:</strong> <p id="resumo-protocolo"></p>
+        <strong>Data da coleta:</strong> <p id="resumo-data"></p>
+        <strong>Horário estimado:</strong> <p id="resumo-horario"></p>
+        <strong>Endereço:</strong> <p id="resumo-endereco"></p>
+        <strong>Materiais:</strong> <p id="resumo-materiais"></p>
+      </div>
+      <button id="voltar-btn">Voltar para o Início</button>
+    </div>
+</div>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
