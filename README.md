@@ -36,13 +36,13 @@ Por fim, altere esse arquivo com as instruções de como poderemos testar o seu 
 
 ####
 
-# 📄 Documentação Processo Seletivo - Felipe Abe QA Júnior
+# Documentação Processo Seletivo - Felipe Abe QA Júnior
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-### 🛠 Backend
+### Backend
 
 - **Node.js** — Ambiente de execução JavaScript
 - **Express.js** — Framework minimalista para APIs REST
@@ -52,20 +52,20 @@ Por fim, altere esse arquivo com as instruções de como poderemos testar o seu 
 - **Supertest** — Testes de integração de API
 - **Docker** — Containerização e isolamento do ambiente
 
-### 🎨 Frontend
+### Frontend
 
 - **HTML5, CSS3, JavaScript (Vanilla)** — Interface sem frameworks
 - **Nginx** — Servidor web para arquivos estáticos
 - **Cypress** — Testes End-to-End
 
-### ✅ Qualidade e Documentação
+### Qualidade e Documentação
 
 - **Gherkin (BDD)** — Especificação de funcionalidades
 - **SonarQube** — Análise de qualidade estática do código
 
 ---
 
-## 💻 Como executar o projeto localmente
+## Como executar o projeto localmente
 
 ### 1. Clone este repositório
 
@@ -94,23 +94,23 @@ Após isso:
 
 ---
 
-## 🧪 Testes Automatizados
+## Testes Automatizados
 
-### ✅ Testes Unitários com Jest
+### Testes Unitários com Jest
 
 ```bash
 docker exec -it recicla_backend sh
 npm run test
 ```
 
-### 🔌 Testes de API com Supertest e Jest
+### Testes de API com Supertest e Jest
 
 ```bash
 docker exec -it recicla_backend sh
 npm run test:api
 ```
 
-### 🧭 Testes E2E com Cypress
+### Testes E2E com Cypress
 
 ```bash
 npx cypress open
@@ -122,7 +122,7 @@ npx cypress open
 
 ---
 
-## 📊 SonarQube
+## SonarQube
 
 ### 1. Execute o SonarQube (com Docker instalado)
 
@@ -141,7 +141,7 @@ Após isso, acesse o dashboard do SonarQube em: [http://localhost:9000](http://l
 
 ---
 
-## 📘 Especificações Gherkin
+## Especificações Gherkin
 
 As funcionalidades foram modeladas em **BDD com Gherkin**:
 
@@ -156,7 +156,7 @@ Cada funcionalidade corresponde a um conjunto de **cenários de teste automatiza
 
 ---
 
-## 🧾 Plano de Testes
+## Plano de Testes
 
 Plano completo em `docs/plano-de-testes.md` incluindo:
 
