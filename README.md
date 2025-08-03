@@ -108,6 +108,17 @@ npm run test
 ```bash
 docker exec -it recicla_backend sh
 npm run test:api
+
+> ⚠️ Observação:
+>
+> Os testes de API simulam chamadas reais à aplicação.
+> Se um teste retornar `401 Unauthorized`, isso pode indicar que:
+> - O token JWT de autenticação não está sendo passado
+> - Ou o middleware de autenticação está funcionando corretamente (e bloqueando requisições sem login)
+>
+> Esse comportamento é **esperado** caso os testes estejam cobrindo cenários sem token ou com falha de autenticação.
+>
+> Verifique os arquivos de teste para entender quais rotas estão sendo validadas e se exigem autenticação.
 ```
 
 ### 🧭 Testes End-to-End com Cypress
