@@ -36,116 +36,85 @@ Por fim, altere esse arquivo com as instruções de como poderemos testar o seu 
 
 ####
 
-## Documentação Processo Seletivo - Felipe Abe QA Júnior
+🚀 Documentação Processo Seletivo - Felipe Abe QA Júnior
+🛠️ Tecnologias Utilizadas
+Backend
 
-## Tecnologias Utilizadas
+Node.js — Ambiente de execução JavaScript
+Express.js — Framework minimalista para APIs REST
+PostgreSQL — Banco de dados relacional
+JWT (JSON Web Token) — Autenticação segura
+Jest — Testes unitários
+Supertest — Testes de integração de API
+Docker — Containerização e isolamento do ambiente
 
-### Backend
+Frontend
 
-- **Node.js** — Ambiente de execução JavaScript
-- **Express.js** — Framework minimalista para APIs REST
-- **PostgreSQL** — Banco de dados relacional
-- **JWT (JSON Web Token)** — Autenticação segura
-- **Jest** — Testes unitários
-- **Supertest** — Testes de integração de API
-- **Docker** — Containerização e isolamento do ambiente
+HTML5, CSS3, JavaScript (Vanilla) — Interface sem frameworks
+Nginx — Servidor web para arquivos estáticos
+Cypress — Testes End-to-End
 
-### Frontend
+Qualidade e Documentação
 
-- **HTML5, CSS3, JavaScript (Vanilla)** — Interface sem frameworks
-- **Nginx** — Servidor web para arquivos estáticos
-- **Cypress** — Testes End-to-End
+Gherkin (BDD) — Especificação de funcionalidades
+SonarQube — Análise de qualidade estática do código
 
-### Qualidade e Documentação
+🏃‍♂️ Como Executar o Projeto Localmente
 
-- **Gherkin (BDD)** — Especificação de funcionalidades
-- **SonarQube** — Análise de qualidade estática do código
+1. Clone este repositório
+   bashgit clone https://github.com/seu-usuario/recicla-agendamentos.git
+   cd recicla-agendamentos
+2. Configure as variáveis de ambiente
+   bashcp .env.example .env
+3. Inicie os containers com Docker
+   bashdocker-compose up --build
+   🌐 Acessos após execução:
 
-## Como executar o projeto localmente
+Frontend: http://localhost:8080
+API (Backend): http://localhost:3000/api
+Banco de dados: localhost:5432
 
-# 1. Clone este repositório
-
-git clone https://github.com/seu-usuario/recicla-agendamentos.git
-cd recicla-agendamentos
-
-# 2. Copie o arquivo de variáveis de ambiente e configure se necessário
-
-cp .env.example .env
-
-# 3. Inicie os containers com Docker
-
-docker-compose up --build
-
-# Após isso:
-
-# Acesse o frontend: http://localhost:8080
-
-# Acesse a API (backend): http://localhost:3000/api
-
-# O banco estará rodando em localhost:5432
-
-## Testes Automatizados
-
-# Testes Unitários com Jest
-
-docker exec -it recicla_backend sh
+🧪 Testes Automatizados
+Testes Unitários com Jest
+bashdocker exec -it recicla_backend sh
 npm run test
-
-# Testes de API com Supertest e Jest
-
-docker exec -it recicla_backend sh
+Testes de API com Supertest e Jest
+bashdocker exec -it recicla_backend sh
 npm run test:api
+Testes E2E com Cypress
+bashnpx cypress open
+📊 Cobertura de Testes
 
-# Testes E2E com Cypress
+✅ Cobertura: Mais de 80% das regras críticas testadas
+✅ Testes E2E: Simulam fluxos completos do usuário e administrador
+✅ Tratamento: Falhas e exceções são tratadas adequadamente em todos os testes
 
-npx cypress open
-
-# Cobertura de testes: mais de 80% das regras críticas testadas
-
-# Testes E2E: simulam fluxos completos do usuário e administrador
-
-# Falhas e exceções são tratadas adequadamente em todos os testes
-
-## SonarQube
-
-# Execute o SonarQube (com docker instalado)
-
-docker-compose -f docker-compose.sonar.yml up -d
-
-# Execute a análise
-
-docker exec -it recicla_backend sh
+📈 SonarQube
+Execute o SonarQube
+bashdocker-compose -f docker-compose.sonar.yml up -d
+Execute a análise
+bashdocker exec -it recicla_backend sh
 npm run sonar
-
-# Após isso, acesse o dashboard SonarQube em: http://localhost:9000
-
-## Especificações Gherkin
-
-# As funcionalidades foram modeladas em BDD com Gherkin:
-
+🎯 Dashboard
+Após executar, acesse o dashboard SonarQube em: http://localhost:9000
+📝 Especificações Gherkin
+As funcionalidades foram modeladas em BDD com Gherkin:
 docs/gherkin/
 ├── 01-agendamento-coleta.feature
 ├── 02-autenticacao-admin.feature
 └── 03-gestao-agendamentos.feature
 
-# Cada funcionalidade corresponde a um conjunto de cenários de teste automatizados, garantindo alinhamento entre regras de negócio e execução prática.
+📌 Observação: Cada funcionalidade corresponde a um conjunto de cenários de teste automatizados, garantindo alinhamento entre regras de negócio e execução prática.
 
-## Plano de Testes
+📋 Plano de Testes
+Plano completo em docs/plano-de-testes.md incluindo:
 
-# Plano completo em docs/plano-de-testes.md incluindo:
+✅ Estratégia de testes (pirâmide)
+✅ Testes unitários, API e E2E detalhados
+✅ Cobertura de requisitos funcionais e não funcionais
+✅ Dados de teste, ambiente e ferramentas
+✅ Relatório de falhas manuais e correções
 
-# Estratégia de testes (pirâmide)
-
-# Testes unitários, API e E2E detalhados
-
-# Cobertura de requisitos funcionais e não funcionais
-
-# Dados de teste, ambiente e ferramentas
-
-# Relatório de falhas manuais e correções
-
-## Autor
-
-# Felipe Abe
-
-# Analista de Qualidade de Software - Processo Seletivo FIESC
+👨‍💻 Autor
+Felipe Abe
+Analista de Qualidade de Software - Processo Seletivo FIESC
