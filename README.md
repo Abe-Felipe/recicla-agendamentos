@@ -116,7 +116,7 @@ npm run test:api
 > - O token JWT de autenticação não está sendo passado
 > - Ou o middleware de autenticação está funcionando corretamente (e bloqueando requisições sem login)
 >
-> Esse comportamento é **esperado** caso os testes estejam cobrindo cenários sem token ou com falha de autenticação.
+> Esse comportamento é esperado caso os testes estejam cobrindo cenários sem token ou com falha de autenticação.
 >
 > Verifique os arquivos de teste para entender quais rotas estão sendo validadas e se exigem autenticação.
 ```
