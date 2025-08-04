@@ -98,7 +98,6 @@ Bash
 
 ```bash
 docker-compose exec backend npx node-pg-migrate up
-
 docker-compose exec backend npm run seed
 ```
 
