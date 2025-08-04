@@ -3,10 +3,7 @@ const bcrypt = require('bcryptjs');
 const db = require('../src/config/database');
 
 async function seed() {
-  console.log('Iniciando o processo de seeding...');
-
-  try {
-    console.log('Criando usuário administrador...');
+   try {
     const adminEmail = 'admin@recicla.com';
     const adminPassword = process.env.POSTGRES_PASSWORD || 'senha4321secreta';
 
@@ -17,16 +14,11 @@ async function seed() {
       'INSERT INTO usuarios (email, password_hash) VALUES ($1, $2) ON CONFLICT (email) DO NOTHING;',
       [adminEmail, passwordHash]
     );
-    console.log('Usuário administrador criado ou já existente.');
-
-    console.log('Seeding concluído com sucesso!');
   } catch (error) {
     console.error('Erro durante o seeding:', error);
   } finally {
     await db.pool.end();
-    console.log('Conexão com o banco de dados fechada.');
   }
 }
 
-// Executa a função
 seed();

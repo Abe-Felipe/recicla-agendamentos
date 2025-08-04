@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
 app.use('/api/agendamentos', agendamentoRoutes);
 app.use('/api/auth', authRoutes);
 
-// Só roda o listen se o arquivo for executado diretamente
 if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
