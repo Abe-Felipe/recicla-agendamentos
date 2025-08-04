@@ -92,8 +92,9 @@ cp .env.example .env
 docker-compose up --build -d
 ```
 
-4. Prepare o Banco de Dados (Execute em um novo terminal)
-   Bash
+### 4. Prepare o Banco de Dados (Execute em um novo terminal)
+
+Bash
 
 ```bash
 docker-compose exec backend npx node-pg-migrate up
