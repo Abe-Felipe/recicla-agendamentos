@@ -111,7 +111,7 @@ Após isso:
 
 ## 🧪 Testes Automatizados
 
-### Testes Unitários com Jest
+### Testes Unitários e API com Jest e SuperTest
 
 ```bash
 docker exec -it recicla_backend sh
