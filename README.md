@@ -38,7 +38,13 @@ Por fim, altere esse arquivo com as instruções de como poderemos testar o seu 
 
 # 📄 Documentação Processo Seletivo - Felipe Abe QA Júnior
 
----
+## 📋 Sobre o Projeto
+
+Sistema de agendamento de coleta de materiais recicláveis com:
+
+- Interface web para cidadãos agendarem coletas
+- Painel administrativo para gestão
+- Autenticação JWT e banco PostgreSQL
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -83,7 +89,18 @@ cp .env.example .env
 ### 3. Inicie os containers com Docker
 
 ```bash
-docker-compose up --build
+docker-compose up --build -d
+```
+
+4. Prepare o Banco de Dados (Execute em um novo terminal)
+   Bash
+
+```bash
+# Cria as tabelas
+docker-compose exec backend npm run migrate up
+
+# Insere os dados iniciais (usuário admin)
+docker-compose exec backend npm run seed
 ```
 
 Após isso:
