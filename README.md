@@ -254,6 +254,33 @@ A estratégia aplicada seguiu a pirâmide de testes:
 
 ---
 
+## 🐛 Bug Report Manual (RQNF11)
+
+### 1. Bug: Filtro de data não exibe resultados esperados
+
+- **Descrição:** Ao filtrar a listagem de agendamentos por uma data específica que deveria conter registros, nenhum resultado era exibido.
+- **Causa:** A data enviada no filtro não estava compatível com o formato do banco, ou a query no backend não estava tratando corretamente o parâmetro.
+- **Impacto:** O administrador pode ser induzido a pensar que não há agendamentos existentes para a data consultada.
+- **Status:** Corrigido. A lógica de filtro por `data_coleta` foi ajustada e testada com sucesso.
+
+---
+
+### 2. Bug: Modal fecha mas o status não atualiza corretamente
+
+- **Descrição:** Durante o teste E2E para atualizar o status de um agendamento (ex: para "Cancelado"), a modal se fechava após clicar em "Salvar", mas nem sempre o backend refletia essa alteração.
+- **Causa:** A requisição era disparada, mas por vezes a seleção do item incorreto (ou a não espera pela atualização) fazia parecer que o agendamento errado havia sido alterado.
+- **Impacto:** Pode causar inconsistência entre o que foi exibido no frontend e o que foi realmente persistido no backend.
+- **Status:** Tratado nos testes. No teste automatizado, consideramos que a modal fechar indica sucesso temporariamente, mas o fluxo precisa ser reforçado no futuro.
+
+---
+
+### 3. Bug: Falha ao gerar protocolo automaticamente
+
+- **Descrição:** Ao tentar registrar um novo agendamento, a aplicação retornava erro `null value in column "protocolo" of relation "agendamentos" violates not-null constraint`.
+- **Causa:** O campo `protocolo` era `NOT NULL`, mas sua geração era feita _após_ a criação do registro. Durante testes, a criação falhava quando a lógica secundária não era completada.
+- **Impacto:** Impedia qualquer novo agendamento até correção.
+- **Status:** Corrigido. O campo `protocolo` foi alterado para permitir `NULL` na migração, sendo atualizado em seguida via `updateProtocolo`.
+
 ## 📊 Relatório SonarQube (RQNF13 - Diferencial)
 
 - **Status:** Implementação Local (Docker + SonarScanner)
