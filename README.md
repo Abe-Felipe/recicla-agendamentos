@@ -36,7 +36,7 @@ Por fim, altere esse arquivo com as instruções de como poderemos testar o seu 
 
 ####
 
-# 📄 Documentação Processo Seletivo - Felipe Abe QA Júnior
+# 📄 Documentação Processo Seletivo - Felipe Abe - QA Júnior
 
 ## 📋 Sobre o Projeto
 
@@ -46,9 +46,9 @@ Sistema de agendamento de coleta de materiais recicláveis com:
 - Painel administrativo para gestão
 - Autenticação JWT e banco PostgreSQL
 
-## 🚀 Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
 
-### 🛠 Backend
+### Backend
 
 - **Node.js** — Ambiente de execução JavaScript
 - **Express.js** — Framework minimalista para APIs REST
@@ -58,13 +58,13 @@ Sistema de agendamento de coleta de materiais recicláveis com:
 - **Supertest** — Testes de integração de API
 - **Docker** — Containerização e isolamento do ambiente
 
-### 🎨 Frontend
+### Frontend
 
 - **HTML5, CSS3, JavaScript (Vanilla)** — Interface sem frameworks
 - **Nginx** — Servidor web para arquivos estáticos
 - **Cypress** — Testes End-to-End
 
-### ✅ Qualidade e Documentação
+### Qualidade e Documentação
 
 - **Gherkin (BDD)** — Especificação de funcionalidades
 - **SonarQube** — Análise de qualidade estática do código
@@ -111,47 +111,29 @@ Após isso:
 
 ## 🧪 Testes Automatizados
 
-### ✅ Testes Unitários com Jest
+### Testes Unitários com Jest
 
 ```bash
 docker exec -it recicla_backend sh
 npm run test
 ```
 
-### 🔌 Testes de API com Supertest e Jest
-
-```bash
-docker exec -it recicla_backend sh
-npm run test:api
-
-> ⚠️ Observação:
->
-> Os testes de API simulam chamadas reais à aplicação.
-> Se um teste retornar `401 Unauthorized`, isso pode indicar que:
-> - O token JWT de autenticação não está sendo passado
-> - Ou o middleware de autenticação está funcionando corretamente (e bloqueando requisições sem login)
->
-> Esse comportamento é esperado caso os testes estejam cobrindo cenários sem token ou com falha de autenticação.
->
-> Verifique os arquivos de teste para entender quais rotas estão sendo validadas e se exigem autenticação.
-```
-
 ### 🧭 Testes End-to-End com Cypress
 
-#### ✅ 1. Instale as dependências (caso ainda não tenha)
+#### 1. Instale as dependências (caso ainda não tenha)
 
 ```bash
 cd frontend
 npm install
 ```
 
-#### ✅ 2. Inicie o ambiente completo (API + Frontend) com Docker:
+#### 2. Inicie o ambiente completo (API + Frontend) com Docker:
 
 ```bash
 docker-compose up --build
 ```
 
-#### ✅ 3. Execute os testes Cypress
+#### 3. Execute os testes Cypress
 
 ##### Modo interativo (GUI):
 
@@ -177,25 +159,6 @@ npx cypress run
 - **Cobertura de testes**: mais de 80% das regras críticas testadas
 - **Testes E2E**: simulam fluxos completos do usuário e administrador
 - **Falhas e exceções** são tratadas adequadamente em todos os testes
-
----
-
-## 📊 SonarQube
-
-### 1. Execute o SonarQube (com Docker instalado)
-
-```bash
-docker-compose -f docker-compose.sonar.yml up -d
-```
-
-### 2. Execute a análise
-
-```bash
-docker exec -it recicla_backend sh
-npm run sonar
-```
-
-Após isso, acesse o dashboard do SonarQube em: [http://localhost:9000](http://localhost:9000)
 
 ---
 
