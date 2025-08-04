@@ -34,7 +34,6 @@ describe('Painel Administrativo - Fluxos Principais', () => {
     cy.get('#filtro-status').select('Agendado');
     cy.get('#filtros-form').submit();
 
-    // Aguarda o carregamento da nova lista
     cy.wait(1000);
     cy.get('#agendamentos-content').should('exist');
   });

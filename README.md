@@ -211,6 +211,50 @@ Plano completo em `docs/plano-de-testes.md` incluindo:
 
 ---
 
+## ✅ Requisitos Não Atendidos (RQNF12)
+
+### RF006 - Gerenciamento de Tipos de Materiais
+
+**Motivo da não implementação:**  
+Devido a limitações de tempo e priorização das funcionalidades obrigatórias, o módulo administrativo para cadastro/edição de tipos de materiais recicláveis (RF006) não foi implementado.
+
+---
+
+## 🧪 Estratégia de Testes Automatizados (RQNF10)
+
+A estratégia aplicada seguiu a pirâmide de testes:
+
+- **Testes Unitários (Jest)** → Regras críticas do backend
+- **Testes de API (Supertest/Cypress)** → Validação dos endpoints REST
+- **Testes E2E (Cypress)** → Fluxos completos no frontend
+
+📁 Arquivo de referência: `docs/plano-de-testes.md`
+
+### 📌 Prioridades Definidas
+
+- **Testes de API** – Garantir regras e segurança no backend
+- **Testes Unitários** – Cobertura de lógica e validações específicas
+- **Testes E2E** – Validação de fluxo completo e experiência do usuário
+- **Documentação e Evidências** – Incluídas no repositório para avaliação
+
+---
+
+## 📊 Relatório SonarQube (RQNF13 - Diferencial)
+
+- **Status:** Implementação Local (Docker + SonarScanner)
+- **Relatório:** `docs/sonar-report.md`
+
+### 🧩 Principais Apontamentos
+
+- Alguns métodos poderiam ser extraídos para funções reutilizáveis (refatoração simples)
+- Melhorar cobertura de testes em middleware de autenticação
+
+### 🛠️ Ajustes sugeridos a curto prazo
+
+- Melhorar legibilidade de funções longas (`painel.js`)
+- Centralizar regras de negócio em serviços reutilizáveis
+- Garantir que todos os handlers tenham tratamento de erro robusto
+
 ## 👤 Autor
 
 **Felipe Abe**  

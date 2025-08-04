@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let currentAgendamentoId = null;
 
-  // Funções utilitárias
   const formatarData = (dataString) => {
     const [ano, mes, dia] = dataString.split('T')[0].split('-');
     return `${dia}/${mes}/${ano}`;
@@ -31,7 +30,6 @@ window.addEventListener('DOMContentLoaded', () => {
     justificativaTextarea.value = '';
   };
 
-  // Renderiza a tabela de agendamentos
   const renderizarAgendamentos = (agendamentos) => {
     if (agendamentos.length === 0) {
       agendamentosContent.innerHTML = '<p>Nenhum agendamento encontrado para os filtros selecionados.</p>';
@@ -175,7 +173,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Eventos
   filtrosForm.addEventListener('submit', e => {
     e.preventDefault();
     buscarErenderizarAgendamentos();
@@ -197,6 +194,5 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Inicializa
   buscarErenderizarAgendamentos();
 });

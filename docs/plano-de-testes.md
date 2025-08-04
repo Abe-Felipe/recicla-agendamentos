@@ -10,24 +10,24 @@ Validar completamente as funcionalidades, regras de negócio, integrações e ex
 
 ## 2.1 Funcionalidades Obrigatórias
 
-- **RF001:** Solicitar Agendamento de Coleta ✔️
-- **RF002:** Autenticação de Usuários (Admin) ✔️
-- **RF003:** Armazenar e Listar Agendamentos ✔️
-- **RF004:** Detalhar Agendamento em Modal ✔️
-- **RF005:** Atualizar Status da Coleta ✔️
+- **RF001:** Solicitar Agendamento de Coleta
+- **RF002:** Autenticação de Usuários (Admin)
+- **RF003:** Armazenar e Listar Agendamentos
+- **RF004:** Detalhar Agendamento em Modal
+- **RF005:** Atualizar Status da Coleta
 
 ## 2.2 Regras de Negócio Críticas
 
-- **RN001.2:** Data mínima de 2 dias úteis para coleta ✔️
-- **RN001.4:** Campos obrigatórios validados no frontend e backend ✔️
-- **RN002.2:** Endpoints protegidos com JWT ✔️
-- **RN005.3:** Justificativa obrigatória para "Concluído" e "Cancelado" ✔️
+- **RN001.2:** Data mínima de 2 dias úteis para coleta
+- **RN001.4:** Campos obrigatórios validados no frontend e backend
+- **RN002.2:** Endpoints protegidos com JWT
+- **RN005.3:** Justificativa obrigatória para "Concluído" e "Cancelado"
 
 ## 2.3 Requisitos Não Funcionais
 
-- **RQNF2:** 10 testes unitários implementados com Jest ✔️
-- **RQNF5:** 1+ teste de API com Cypress (incluindo autenticação, criação, listagem, atualização) ✔️
-- **RQNF6:** Testes E2E automatizados com Cypress cobrindo fluxos principais ✔️
+- **RQNF2:** 10 testes unitários implementados com Jest
+- **RQNF5:** 1+ teste de API com Cypress (incluindo autenticação, criação, listagem, atualização)
+- **RQNF6:** Testes E2E automatizados com Cypress cobrindo fluxos principais
 
 ---
 
