@@ -96,10 +96,8 @@ docker-compose up --build -d
    Bash
 
 ```bash
-# Cria as tabelas
-docker-compose exec backend npm run migrate up
+docker-compose exec backend npx node-pg-migrate up
 
-# Insere os dados iniciais (usuário admin)
 docker-compose exec backend npm run seed
 ```
 

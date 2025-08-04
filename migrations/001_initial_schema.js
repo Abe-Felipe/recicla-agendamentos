@@ -21,7 +21,7 @@ exports.up = (pgm) => {
     telefone: { type: 'varchar(50)', notNull: true },
     email: { type: 'varchar(255)', notNull: false },
     status: { type: 'varchar(50)', notNull: true, default: 'Pendente' },
-    protocolo: { type: 'varchar(255)', notNull: true, unique: true },
+    protocolo: { type: 'varchar(255)', notNull: false, unique: true },
     justificativa: { type: 'text' },
     created_at: {
       type: 'timestamp',
